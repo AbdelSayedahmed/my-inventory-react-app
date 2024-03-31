@@ -1,7 +1,7 @@
 function InputForm() {
   return (
-    <div id="input-form">
-      <a href="javascript:void(0)" className="input-form__close-btn">&times;</a>
+    <div id="input-form" className="overlay">
+      <a href="javascript:void(0)" id="input-form__close-btn">&times;</a>
       <fieldset id="input-form__fieldset">
         <legend id="input-form__fieldset__legend">Your Item</legend>
         <form id="input-form__form">
@@ -31,7 +31,7 @@ function InputForm() {
             </select>
           </div>
           <input type="reset" value="Reset" id="input-form__reset-btn" />
-          <input type="submit" value="Upload" id="input-form__delete-btn" />
+          <input type="submit" value="Upload" id="input-form__upload-btn" />
         </form>
         <div id="input-form__error-box"></div>
       </fieldset>

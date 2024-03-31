@@ -1,7 +1,7 @@
 function EditForm() {
   return (
-    <div id="edit-form">
-      <a href="javascript:void(0)" className="edit-form__close-btn">&times;</a>
+    <div id="edit-form" className="overlay">
+      <a href="javascript:void(0)" id="edit-form__close-btn">&times;</a>
       <fieldset id="edit-form__fieldset">
         <legend id="edit-form__fieldset__legend">Your Item</legend>
         <form id="edit-form__form">

@@ -7,63 +7,39 @@ body {
     z-index: 0;
 }
 
-img { 
-    font-weight: 600;
-    line-height: 2; 
-    text-align: center;
-    top: 0; bottom: 0; left: 0; right: 0;
-    width: auto;
-    margin: 10px;
-    height: auto;
-    display: block;
-    position: relative;
-}
-  
-img:before { 
-    content: "We're sorry, the link below is broken :(";
-    display: block;
-    margin-bottom: 10px;
-}
-  
-img:after { 
-    content: "(url: " attr(src) ")";
-    display: block;
-    font-size: 12px;
-}
-
-header {
-    margin: 0px;
-    text-align: center;
-    background-color: #2e59a3;
-}
-
-h1 {
-    margin: 0;
-    padding: 30px;
-}
-
-a {
+a, a:hover, a:active, a:visited {
     text-decoration: none;
     color: black;
 }
 
-.nav-bar {
-    display: flex;
-    width: 100%;
-}
+#header {
+    margin: 0px;
+    text-align: center;
+    background-color: #2e59a3;
 
-.nav-item {
-    background-color: white;
-    padding: 10px;
-    border: 1px solid black;
-}
+    #header__title {
+        margin: 0;
+        padding: 30px;
+    }
 
-.nav-item:hover {
-    color: white;
-    background-color: black;
-    padding: 10px;
-    border: 1px solid black;
-    cursor: pointer;
+    #header__nav {
+        display: flex;
+        width: 100%;
+    }
+    
+    .header__nav__item {
+        background-color: white;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    
+    .header__nav__item:hover {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border: 1px solid black;
+        cursor: pointer;
+    }
 }
 
 #main {
@@ -72,79 +48,139 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     min-height: 600px;
-}
 
-.uploaded-item {
-    width: 49%;
-    height: 270px;
-    margin-bottom: 0.5em;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    border: 2px solid black;
-    border-radius: 7px;
-}
-
-.uploaded-image {
-    display: block;
-    top: 0; bottom: 0; left: 0; right: 0;
-    width: 250px;
-    height: 250px;
-    max-height: 500px;
-    margin: 10px;
-    border: 1px solid grey;
-}
-
-.uploaded-card {
-    display: grid;
-    grid-template-rows: 10% 60% 10% 10%;
-    height: 250px;
-    gap: 10px;
-
-    .uploaded-title {
-        grid-row: 1;
+    .uploaded-item {
+        width: 49%;
+        height: 270px;
+        margin-bottom: 0.5em;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        border: 2px solid black;
+        border-radius: 7px;
     }
-    .uploaded-description {
-        grid-row: 2;
+    
+    .uploaded-image {
+        display: block;
+        top: 0; bottom: 0; left: 0; right: 0;
+        width: 250px;
+        height: 250px;
+        max-height: 500px;
+        margin: 10px;
+        border: 1px solid grey;
+    }
+    
+    .uploaded-card {
+        display: grid;
+        grid-template-rows: 10% 60% 10% 10%;
+        height: 250px;
+        gap: 10px;
+    
+        .uploaded-title {
+            grid-row: 1;
+        }
+        .uploaded-description {
+            grid-row: 2;
+            overflow: auto;
+        }
+        .container {
+            grid-row: 3;
+        }
+        .edit-del-btn {
+            grid-row: 4;
+        }
+    }
+    
+    .edit-del-btn {
+        bottom: 0;
+        text-align: right;
+        margin: 10px;
+    }
+    
+    .btn {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 12px;
+        color: white;
+        background-color: #919191;
+        margin-left: 7px;
+    }
+    
+    .btn:hover {
+        background-color: #808080;
+        cursor: pointer;
+    }
+    
+    .del, .make-sure-del {
+        background-color: #eb5757;
+    }
+    
+    .del:hover, .make-sure-del:hover {
+        background-color: red;
+        cursor: pointer;
+    }
+}
+
+#input-form {
+    #input-form__fieldset {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        background-color: white;
+        width: 65%;
+        height: 65%;
         overflow: auto;
     }
-    .container {
-        grid-row: 3;
+
+    #input-form__fieldset__legend {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        text-align: center;
+        padding: 10px;
     }
-    .edit-del-btn {
-        grid-row: 4;
+    
+    .input-form__item {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px 20px;
+    }
+
+    #input-form__item__description {
+        resize: none;
+    }
+    
+    #input-form__reset-btn, #input-form__upload-btn {
+        border: 0;
+        border-radius: 6px;
+        padding: 7px 45px;
+        margin-right: 3px;
+    }
+
+    #input-form__upload-btn {
+        background-color: #1296e3;
+        font-weight: bold;
+    }
+
+    #input-form__reset-btn {
+        background-color: #cacccf;
+        font-weight: bold;
+    }
+    
+    
+    #input-form__reset-btn:hover, #input-form__upload-btn:hover {
+      color: white;
+      cursor: pointer;
+    }
+    
+    #input-form__error-box {
+        display: none;
+        color: red;
     }
 }
 
-.edit-del-btn {
-    bottom: 0;
-    text-align: right;
-    margin: 10px;
-}
-
-.btn {
-    border: none;
-    border-radius: 5px;
-    padding: 5px 12px;
-    color: white;
-    background-color: #919191;
-    margin-left: 7px;
-}
-
-.btn:hover {
-    background-color: #808080;
-    cursor: pointer;
-}
-
-.del, .make-sure-del {
-    background-color: #eb5757;
-}
-
-.del:hover, .make-sure-del:hover {
-    background-color: red;
-    cursor: pointer;
-}
-
-.overlay, #popup { 
+.overlay { 
   height: 100%;
   width: 0;
   position: fixed;
@@ -175,75 +211,6 @@ a {
   top: 20px;
   right: 45px;
   font-size: 60px;
-}
-
-#popup-bin {
-    text-align: center;
-    font-size: 40px;
-    border: 2px solid orangered;
-    border-radius: 15px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background-color: white;
-    width: 30%;
-    height: 30%;
-    overflow: auto;
-}
-
-fieldset {
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background-color: white;
-    width: 65%;
-    height: 65%;
-    overflow: auto;
-}
-
-legend {
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-.form-inputs {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0px 20px;
-}
-
-#form-reset,
-#upload {
-  border: 0;
-  border-radius: 6px;
-  padding: 7px 45px;
-  margin-right: 3px;
-}
-
-#upload:hover,
-#form-reset:hover {
-  background-color: #0b6396;
-  cursor: pointer;
-}
-
-input[type="submit"] {
-  background-color: #1296e3;
-  font-weight: bold;
-}
-
-input[type="reset"] {
-  background-color: #cacccf;
-  font-weight: bold;
-}
-
-.error {
-    display: none;
-    color: red;
 }
 
 footer {
@@ -290,3 +257,4 @@ footer a{
     color: #f9f8eb;
     font-style: italic;
 }
+
