@@ -1,6 +1,6 @@
 function Main() {
     return (
-        null
+        <div id="main"></div>
     )
 }
 
