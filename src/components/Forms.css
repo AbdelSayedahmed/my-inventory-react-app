@@ -1,0 +1,104 @@
+#input-form, #edit-form { 
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#input-form__fieldset, #edit-form__fieldset {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: white;
+    width: 65%;
+    height: 65%;
+    overflow: auto;
+}
+
+#input-form__fieldset__legend, #edit-form__fieldset__legend {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.input-form__item, .edit-form__item {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 20px;
+}
+
+#input-form__item__description, #edit-form__item__description {
+    resize: none;
+}
+
+#input-form__reset-btn, #input-form__upload-btn {
+    border: 0;
+    border-radius: 6px;
+    padding: 7px 45px;
+    margin-right: 3px;
+}
+
+#input-form__upload-btn {
+    background-color: #1296e3;
+    font-weight: bold;
+}
+
+#input-form__reset-btn {
+    background-color: #cacccf;
+    font-weight: bold;
+}
+
+
+#input-form__reset-btn:hover, #input-form__upload-btn:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#edit-form__save-btn {
+    border: 0;
+    border-radius: 6px;
+    padding: 7px 45px;
+    margin-right: 3px;
+    background-color: #1296e3;
+    font-weight: bold;
+}
+
+#edit-form__save-btn:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#input-form__error-box, #edit-form__error-box {
+    display: none;
+    color: red;
+}
+
+#input-form__close-btn, #edit-form__close-btn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#input-form__close-btn:hover, #edit-form__close-btn:hover {
+    color: #f1f1f1;
+}
+
+#input-form, #input-form__close-btn, #edit-form, #edit-form__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }

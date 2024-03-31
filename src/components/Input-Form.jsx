@@ -1,8 +1,8 @@
-import "./Input-Form.css";
+import "./Forms.css";
 
 function InputForm() {
   return (
-    <div id="input-form" className="overlay">
+    <div id="input-form">
       <button id="input-form__close-btn">&times;</button>
       <fieldset id="input-form__fieldset">
         <legend id="input-form__fieldset__legend">Your Item</legend>

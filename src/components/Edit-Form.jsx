@@ -1,8 +1,8 @@
-import "./Edit-Form.css";
+import "./Forms.css";
 
 function EditForm() {
   return (
-    <div id="edit-form" className="overlay">
+    <div id="edit-form">
       <button id="edit-form__close-btn">&times;</button>
       <fieldset id="edit-form__fieldset">
         <legend id="edit-form__fieldset__legend">Your Item</legend>
@@ -32,7 +32,7 @@ function EditForm() {
               <option value="Damaged">Damaged</option>
             </select>
           </div>
-          <input type="submit" value="Save" id="edit-form__delete-btn" />
+          <input type="submit" value="Save" id="edit-form__save-btn" />
         </form>
         <div id="edit-form__error-box"></div>
       </fieldset>
