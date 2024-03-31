@@ -1,0 +1,29 @@
+#header {
+    margin: 0px;
+    text-align: center;
+    background-color: #2e59a3;
+}
+
+#header__title {
+    margin: 0;
+    padding: 30px;
+}
+
+#header__nav {
+    display: flex;
+    width: 100%;
+}
+
+.header__nav__item {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.header__nav__item:hover {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+#main {
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 600px;
+}
+
+.uploaded-item {
+    width: 49%;
+    height: 270px;
+    margin-bottom: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+.uploaded-image {
+    display: block;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 250px;
+    height: 250px;
+    max-height: 500px;
+    margin: 10px;
+    border: 1px solid grey;
+}
+
+.uploaded-card {
+    display: grid;
+    grid-template-rows: 10% 60% 10% 10%;
+    height: 250px;
+    gap: 10px;
+
+    .uploaded-title {
+        grid-row: 1;
+    }
+    .uploaded-description {
+        grid-row: 2;
+        overflow: auto;
+    }
+    .container {
+        grid-row: 3;
+    }
+    .edit-del-btn {
+        grid-row: 4;
+    }
+}
+
+.edit-del-btn {
+    bottom: 0;
+    text-align: right;
+    margin: 10px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 12px;
+    color: white;
+    background-color: #919191;
+    margin-left: 7px;
+}
+
+.btn:hover {
+    background-color: #808080;
+    cursor: pointer;
+}
+
+.del, .make-sure-del {
+    background-color: #eb5757;
+}
+
+.del:hover, .make-sure-del:hover {
+    background-color: red;
+    cursor: pointer;
+}

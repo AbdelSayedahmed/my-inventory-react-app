@@ -1,3 +1,5 @@
+import "./Main.css"
+
 function Main() {
     return (
         <div id="main"></div>
