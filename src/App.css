@@ -7,14 +7,6 @@ body {
   z-index: 0;
 }
 
-header {
-
-}
-
 main {
-  
-}
-
-footer {
-
+  min-height: 1000px;
 }

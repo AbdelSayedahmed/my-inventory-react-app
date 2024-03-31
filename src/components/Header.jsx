@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./component-styles/Header.css";
 
 function Header() {
   return (
@@ -7,8 +7,8 @@ function Header() {
       <nav id="header__nav">
         <div className="header__nav__item">Home</div>
         <div className="header__nav__item">About Us</div>
-        <div className="header__nav__item">Contact Us</div>
-        <div className="header__nav__item">Upload Your Item</div>
+        <div className="header__nav__item" onClick={() => document.body.scrollIntoView(false)}>Contact Us</div>
+        <div className="header__nav__item" onClick={() => document.getElementById("input-form").style.width = "100%"}>Upload Your Item</div>
       </nav>
     </div>
   );

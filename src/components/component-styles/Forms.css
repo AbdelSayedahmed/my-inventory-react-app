@@ -21,6 +21,7 @@
     width: 65%;
     height: 65%;
     overflow: auto;
+    font-size: 0.3em;
 }
 
 #input-form__fieldset__legend, #edit-form__fieldset__legend {
@@ -101,4 +102,4 @@
     top: 20px;
     right: 45px;
     font-size: 60px;
-  }
+}

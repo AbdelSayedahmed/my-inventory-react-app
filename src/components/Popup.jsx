@@ -1,4 +1,4 @@
-import "./Popup.css";
+import "./component-styles/Popup.css";
 
 function Popup() {
   return (
