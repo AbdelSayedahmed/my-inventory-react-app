@@ -1,5 +1,7 @@
-const data = [
+export const data = [];
 
-];
-
-export default data;
+export const dataFunctions = {
+  addData: (formData) => {
+    data.push(formData);
+  }
+};

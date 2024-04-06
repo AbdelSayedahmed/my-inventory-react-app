@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 600px;
+    height: 100dvh;
 }
 
 .uploaded-item {
