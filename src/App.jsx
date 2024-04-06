@@ -6,12 +6,13 @@ import { InputForm } from './components/Input-Form';
 import Popup from './components/Popup';
 import EditForm from './components/Edit-Form';
 import Footer from './components/Footer';
-import { data } from '/src/components/data.js';
+import { data, dataFunctions } from '/src/components/data.js';
 
 function App() {
   const [itemsData, setItemsData] = useState(data);
 
   const addFormData = (formData) => {
+    dataFunctions.addData(formData);
     setItemsData([...itemsData, formData]);
   };
 

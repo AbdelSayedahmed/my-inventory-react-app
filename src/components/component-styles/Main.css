@@ -6,7 +6,7 @@
     height: 100dvh;
 }
 
-.uploaded-item {
+.item {
     width: 49%;
     height: 270px;
     margin-bottom: 0.5em;
@@ -16,7 +16,7 @@
     border-radius: 7px;
 }
 
-.uploaded-image {
+.item-image {
     display: block;
     top: 0; bottom: 0; left: 0; right: 0;
     width: 250px;
@@ -26,21 +26,18 @@
     border: 1px solid grey;
 }
 
-.uploaded-card {
+.item__card {
     display: grid;
     grid-template-rows: 10% 60% 10% 10%;
     height: 250px;
     gap: 10px;
 
-    .uploaded-title {
+    .item__name {
         grid-row: 1;
     }
-    .uploaded-description {
+    .item__description {
         grid-row: 2;
         overflow: auto;
-    }
-    .container {
-        grid-row: 3;
     }
     .edit-del-btn {
         grid-row: 4;

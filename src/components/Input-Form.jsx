@@ -3,14 +3,16 @@ import "./component-styles/Forms.css";
 import uuid from 'react-uuid';
 
 export function InputForm({ addFormData }) {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     id: uuid(),
     itemName: '',
     itemDescription: '',
     imageUrl: '',
     price: '',
     condition: 'New'
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -23,8 +25,12 @@ export function InputForm({ addFormData }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     document.getElementById("input-form").style.width = 0;
-    console.log(formData);
     addFormData(formData);
+    setFormData(initialFormData);
+  };
+
+  const handleReset = () => {
+    setFormData(initialFormData);
   };
 
   return (
@@ -58,7 +64,7 @@ export function InputForm({ addFormData }) {
               <option value="Damaged">Damaged</option>
             </select>
           </div>
-          <input type="reset" value="Reset" id="input-form__reset-btn" />
+          <input type="reset" value="Reset" id="input-form__reset-btn" onClick={handleReset} />
           <input type="submit" value="Upload" id="input-form__upload-btn" />
         </form>
         <div id="input-form__error-box"></div>
