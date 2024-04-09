@@ -16,7 +16,7 @@
     border-radius: 7px;
 }
 
-.item-image {
+.item__image {
     display: block;
     top: 0; bottom: 0; left: 0; right: 0;
     width: 250px;
@@ -27,24 +27,20 @@
 }
 
 .item__card {
-    display: grid;
-    grid-template-rows: 10% 60% 10% 10%;
-    height: 250px;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-    .item__name {
+    .item__card__name {
         grid-row: 1;
     }
-    .item__description {
+    .item__card__description {
         grid-row: 2;
         overflow: auto;
     }
-    .edit-del-btn {
-        grid-row: 4;
-    }
 }
 
-.edit-del-btn {
+.item__card__btn-nav {
     bottom: 0;
     text-align: right;
     margin: 10px;
