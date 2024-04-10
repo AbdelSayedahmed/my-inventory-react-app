@@ -3,7 +3,12 @@ import "./component-styles/Forms.css";
 function EditForm() {
   return (
     <div id="edit-form">
-      <a id="edit-form__close-btn" onClick={() => document.getElementById("edit-form").style.width = 0}>&times;</a>
+      <a
+        id="edit-form__close-btn"
+        onClick={() => (document.getElementById("edit-form").style.width = 0)}
+      >
+        &times;
+      </a>
       <fieldset id="edit-form__fieldset">
         <legend id="edit-form__fieldset__legend">Your Item</legend>
         <form id="edit-form__form">
@@ -12,7 +17,9 @@ function EditForm() {
             <input id="edit-form__item__name" type="text" required />
           </div>
           <div className="edit-form__item">
-            <label htmlFor="edit-form__item__description">Item Description</label>
+            <label htmlFor="edit-form__item__description">
+              Item Description
+            </label>
             <textarea id="edit-form__item__description" required></textarea>
           </div>
           <div className="edit-form__item">

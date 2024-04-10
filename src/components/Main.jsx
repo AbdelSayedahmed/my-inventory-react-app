@@ -23,10 +23,19 @@ function Main() {
               Description: {item.itemDescription}
             </p>
             <p className="item__card__condition">Condition: {item.condition}</p>
-            <p className="item__card__price">Price: ${formatPrice(item.price)}</p>
+            <p className="item__card__price">
+              Price: ${formatPrice(item.price)}
+            </p>
             <nav className="item__card__btn-nav">
               <button className="edit btn">Edit</button>
-              <button className="del btn" onClick={() => document.getElementById("popup").style.width = "100%"}>Remove</button>
+              <button
+                className="del btn"
+                onClick={() =>
+                  (document.getElementById("popup").style.width = "100%")
+                }
+              >
+                Remove
+              </button>
             </nav>
           </div>
         </div>
